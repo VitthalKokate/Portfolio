@@ -1,0 +1,122 @@
+/* Pure Vanilla CSS Design System for Vitthal Kokate Cyberpunk Portfolio */
+
+:root {
+  --bg-dark: #07070a;
+  --card-bg: rgba(12, 16, 26, 0.75);
+  --card-border: rgba(0, 240, 255, 0.2);
+  --neon-green: #00ff88;
+  --neon-cyan: #00f0ff;
+  --neon-red: #ff2a5f;
+  --neon-yellow: #fcc624;
+  --font-heading: 'Outfit', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg-dark);
+  font-family: var(--font-body);
+  color: #e2e8f0;
+  overflow-x: hidden;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+}
+
+code, pre, .font-mono {
+  font-family: var(--font-mono);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #07070a;
+}
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 4px;
+  border: 1px solid rgba(0, 255, 136, 0.2);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #00ff88;
+  box-shadow: 0 0 10px #00ff88;
+}
+
+/* Cyberpunk Glassmorphism */
+.glass-panel {
+  background: rgba(12, 16, 26, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(0, 240, 255, 0.15);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5),
+              inset 0 0 0 1px rgba(255, 255, 255, 0.05);
+}
+
+.glass-panel-hover {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-panel-hover:hover {
+  border-color: rgba(0, 255, 136, 0.5);
+  box-shadow: 0 12px 40px -10px rgba(0, 255, 136, 0.25),
+              inset 0 0 15px rgba(0, 255, 136, 0.08);
+  transform: translateY(-2px);
+}
+
+/* Neon Text Glow Effects */
+.text-glow-green {
+  text-shadow: 0 0 10px rgba(0, 255, 136, 0.6), 0 0 20px rgba(0, 255, 136, 0.3);
+}
+
+.text-glow-cyan {
+  text-shadow: 0 0 10px rgba(0, 240, 255, 0.6), 0 0 20px rgba(0, 240, 255, 0.3);
+}
+
+.text-glow-red {
+  text-shadow: 0 0 10px rgba(255, 42, 95, 0.6), 0 0 20px rgba(255, 42, 95, 0.3);
+}
+
+/* Corner Accents for Holographic UI */
+.corner-accent-tl {
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  width: 12px;
+  height: 12px;
+  border-top: 2px solid #00ff88;
+  border-left: 2px solid #00ff88;
+}
+.corner-accent-br {
+  position: absolute;
+  bottom: -1px;
+  right: -1px;
+  width: 12px;
+  height: 12px;
+  border-bottom: 2px solid #00f0ff;
+  border-right: 2px solid #00f0ff;
+}
+
+/* Cyber Hologram Pulse Animation */
+@keyframes hologramPulse {
+  0%, 100% { opacity: 0.85; filter: drop-shadow(0 0 8px rgba(0, 255, 136, 0.4)); }
+  50% { opacity: 1; filter: drop-shadow(0 0 16px rgba(0, 240, 255, 0.7)); }
+}
+
+.animate-hologram {
+  animation: hologramPulse 4s infinite ease-in-out;
+}
