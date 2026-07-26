@@ -15,7 +15,7 @@ export const personalData = {
     location: "Pune, Maharashtra, India",
     email: "kokatev73@gmail.com",
     phone: "+91 8530506649",
-    linkedin: "https://www.linkedin.com/in/vitthal-kokate-629322278",
+    linkedin: "www.linkedin.com/in/vitthal-kokate-629322278",
     github: "https://github.com/vitthalkokate",
     resumePdf: "/Vitthal_Kokate_CV.pdf",
     profileImg: profileImg
